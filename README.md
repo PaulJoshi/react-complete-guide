@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# React - The Complete Guide Coursework
+
+Projects and course work I have completed as part of the "React: The Complete Guide" course on Udemy by Maximilian Schwarzmüller.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
