@@ -26,7 +26,7 @@ function ReactConcepts() {
 	return (
 		<div>
 			<Header />
-			<ul id="concepts" className="flex gap-10 m-6 lg:m-12">
+			<ul id="concepts" className="flex flex-wrap justify-center gap-10 m-6 lg:m-12">
 				<Concept
 					image={concepts[0].image}
 					title={concepts[0].title}

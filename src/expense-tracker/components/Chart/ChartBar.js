@@ -15,7 +15,7 @@ const ChartBar = (props) => {
 					style={{ height: barFillHeight }}
 				></div>
 			</div>
-			<div className='font-semibold text-center'>{props.label}</div>
+			<div className='font-semibold text-center text-xs md:text-sm lg:text-base'>{props.label}</div>
 		</div>
 	);
 };

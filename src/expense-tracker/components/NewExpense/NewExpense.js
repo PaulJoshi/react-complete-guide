@@ -16,7 +16,7 @@ const NewExpense = (props) => {
 	return (
 		<div className="w-full">
 			{!isEditing && (
-				<button className="bg-teal-200 px-4 py-3 shadow-md transition hover:shadow-lg" onClick={() => setIsEditing(true)}>➕ Add New Expense</button>
+				<button className="bg-teal-200 px-4 py-3 mb-3 w-full md:w-fit shadow-md transition hover:shadow-lg" onClick={() => setIsEditing(true)}>➕ Add New Expense</button>
 			)}
 			{isEditing && (
 				<ExpenseForm

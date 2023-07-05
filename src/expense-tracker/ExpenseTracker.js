@@ -45,7 +45,7 @@ const ExpenseTracker = () => {
 	};
 
 	return (
-		<div className="m-12 xl:mx-96">
+		<div className="m-4 md:m-12 xl:mx-96">
 			<h2 className="text-3xl font-bold my-6">Expense Tracker</h2>
 			<NewExpense onAddExpense={addExpenseHandler} />
 			<Expenses items={expenses} />
