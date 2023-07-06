@@ -8,6 +8,7 @@ const Landing = () => {
 			<ul className="flex flex-wrap gap-5 my-8">
 				<Link className="bg-teal-100 py-4 px-6 text-center rounded-full cursor-pointer transition hover:bg-teal-200 hover:shadow-sm" to="expense-tracker">💰 Expense Tracker</Link>
 				<Link className="bg-teal-100 py-4 px-6 text-center rounded-full cursor-pointer transition hover:bg-teal-200 hover:shadow-sm" to="react-concepts">💡 React Concepts</Link>
+				<Link className="bg-teal-100 py-4 px-6 text-center rounded-full cursor-pointer transition hover:bg-teal-200 hover:shadow-sm" to="course-goals">⚽ Course Goals</Link>
 			</ul>
 			<p>View the Course on <a className="text-teal-500 transition hover:text-teal-600" target="_blank" rel="noreferrer" href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/">Udemy ↗</a></p>
 			<div className="py-4 mt-6 border-t-2 border-teal-100">
