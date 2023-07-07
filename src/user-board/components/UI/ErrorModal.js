@@ -16,7 +16,7 @@ const ErrorModal = (props) => {
 						<button className="hover:bg-transparent" onClick={handleClick}>❌</button>
 					</div>
 					<div className="p-6">
-						<p className="text-violet-950">Please enter a valid name and age (non-empty values).</p>
+						<p className="text-violet-950">Please enter a valid name and age (non-empty values, age 1-120).</p>
 						<Button onClick={handleClick}>Okay</Button>
 					</div>
 				</div>

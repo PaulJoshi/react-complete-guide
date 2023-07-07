@@ -12,8 +12,12 @@ function UserBoard() {
 	}
 
 	const addUser = (userInput) => {
-		if (userInput.username !== "" && userInput.age !== 0) {
-			setUsers(prevUsers => [...prevUsers, userInput])
+		setUsers(prevUsers => [...prevUsers, userInput])
+	}
+
+	const errorHandler = (userInput) => {
+		if (userInput.username.trim().length !== 0 && userInput.age > 0 && userInput.age < 120) {
+			addUser(userInput)
 		} else {
 			setModalState()
 		}
@@ -22,7 +26,7 @@ function UserBoard() {
 	return (
 		<div className="my-4 mx-auto max-w-xl">
 			<h1 className="text-3xl font-bold mx-4 my-10">👤 User Board</h1>
-			<AddUser onAddUser={addUser}/>
+			<AddUser onAddUser={errorHandler}/>
 			<UsersList users={users} />
 			{showModal && <ErrorModal setModalState={setModalState}/>}
 		</div>

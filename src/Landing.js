@@ -20,6 +20,10 @@ const projects = [
 	{
 		path: "user-board",
 		name: "👤 User Board"
+	},
+	{
+		path: "dummy-login",
+		name: "🗝️ Dummy Login"
 	}
 ]
 
