@@ -1,3 +1,4 @@
+import styles from "../../InvestmentCalculator.module.css"
 
 const formatter = new Intl.NumberFormat('en-IN', {
 	style: 'currency',
@@ -8,7 +9,7 @@ const formatter = new Intl.NumberFormat('en-IN', {
 
 const ResultsTable = (props) => {
 	return (
-		<table className="result">
+		<table className={styles.result}>
 			<thead>
 				<tr>
 					<th>Year</th>

@@ -4,6 +4,7 @@ import ExpenseTracker from "./expense-tracker/ExpenseTracker";
 import ReactConcepts from "./react-concepts/ReactConcepts";
 import CourseGoals from "./course-goals/CourseGoals";
 import InvestmentCalculator from "./investment-calculator/InvestmentCalculator";
+import UserBoard from "./user-board/UserBoard";
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 				<Route path="/react-concepts" element={<ReactConcepts />} />
 				<Route path="/course-goals" element={<CourseGoals />} />
 				<Route path="/investment-calculator" element={<InvestmentCalculator />} />
+				<Route path="/user-board" element={<UserBoard />} />
 			</Routes>
 		</HashRouter>
 	);

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header/Header";
 import ResultsTable from "./components/ResultsTable/ResultsTable";
 import UserInput, { INPUT_POINTS } from "./components/UserInput/UserInput";
-import "./InvestmentCalculator.css"
+import styles from "./InvestmentCalculator.module.css"
 
 function InvestmentCalculator() {
 	const [userInput, setUserInput] = useState(null)
@@ -33,7 +33,7 @@ function InvestmentCalculator() {
 	}
 
 	return (
-		<div>
+		<div className={styles.main}>
 			<Header />
 			<UserInput onCalculate={calculateHandler}/>
 			{!userInput && <p className="text-center">No investment calculated yet</p>}
