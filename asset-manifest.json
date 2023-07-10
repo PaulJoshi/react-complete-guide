@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/react-complete-guide/static/css/main.6cd0402c.css",
-    "main.js": "/react-complete-guide/static/js/main.541f3d29.js",
+    "main.css": "/react-complete-guide/static/css/main.7c6dde02.css",
+    "main.js": "/react-complete-guide/static/js/main.5bf1a3b3.js",
+    "static/media/meals.jpg": "/react-complete-guide/static/media/meals.3d0aa9bbb63ea6705678.jpg",
     "static/media/investment-calculator-logo.png": "/react-complete-guide/static/media/investment-calculator-logo.c20da4d5b23f8d49ad00.png",
     "static/media/components.png": "/react-complete-guide/static/media/components.94774721658e0df179c1.png",
     "static/media/key-concepts.png": "/react-complete-guide/static/media/key-concepts.cad1aa0bf208c387aa98.png",
     "static/media/state.png": "/react-complete-guide/static/media/state.80c2ec248cb782c70327.png",
     "static/media/events.png": "/react-complete-guide/static/media/events.f16434170ea7f221f764.png",
     "index.html": "/react-complete-guide/index.html",
-    "main.6cd0402c.css.map": "/react-complete-guide/static/css/main.6cd0402c.css.map",
-    "main.541f3d29.js.map": "/react-complete-guide/static/js/main.541f3d29.js.map"
+    "main.7c6dde02.css.map": "/react-complete-guide/static/css/main.7c6dde02.css.map",
+    "main.5bf1a3b3.js.map": "/react-complete-guide/static/js/main.5bf1a3b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.6cd0402c.css",
-    "static/js/main.541f3d29.js"
+    "static/css/main.7c6dde02.css",
+    "static/js/main.5bf1a3b3.js"
   ]
 }
