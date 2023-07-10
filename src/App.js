@@ -6,6 +6,7 @@ import CourseGoals from "./course-goals/CourseGoals";
 import InvestmentCalculator from "./investment-calculator/InvestmentCalculator";
 import UserBoard from "./user-board/UserBoard";
 import DummyLoginIndex from "./dummy-login/DummyLoginIndex";
+import ReactMeals from "./react-meals/ReactMeals";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/investment-calculator" element={<InvestmentCalculator />} />
 				<Route path="/user-board" element={<UserBoard />} />
 				<Route path="/dummy-login" element={<DummyLoginIndex />} />
+				<Route path="/react-meals" element={<ReactMeals />} />
 			</Routes>
 		</HashRouter>
 	);

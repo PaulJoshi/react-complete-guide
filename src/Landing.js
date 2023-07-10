@@ -24,6 +24,10 @@ const projects = [
 	{
 		path: "dummy-login",
 		name: "🗝️ Dummy Login"
+	},
+	{
+		path: "react-meals",
+		name: "🍕 React Meals"
 	}
 ]
 
