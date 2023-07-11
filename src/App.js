@@ -7,19 +7,57 @@ import InvestmentCalculator from "./investment-calculator/InvestmentCalculator";
 import UserBoard from "./user-board/UserBoard";
 import DummyLoginIndex from "./dummy-login/DummyLoginIndex";
 import ReactMeals from "./react-meals/ReactMeals";
+import MovieStore from "./movie-store/MovieStore";
+
+export const projects = [
+	{
+		path: "expense-tracker",
+		name: "💰 Expense Tracker",
+		element: <ExpenseTracker />
+	},
+	{
+		path: "react-concepts",
+		name: "💡 React Concepts",
+		element: <ReactConcepts />
+	},
+	{
+		path: "course-goals",
+		name: "⚽ Course Goals",
+		element: <CourseGoals />
+	},
+	{
+		path: "investment-calculator",
+		name: "💸 Investment Calculator",
+		element: <InvestmentCalculator />
+	},
+	{
+		path: "user-board",
+		name: "👤 User Board",
+		element: <UserBoard />
+	},
+	{
+		path: "dummy-login",
+		name: "🗝️ Dummy Login",
+		element: <DummyLoginIndex />
+	},
+	{
+		path: "react-meals",
+		name: "🍕 React Meals",
+		element: <ReactMeals />
+	},
+	{
+		path: "movie-store",
+		name: "📽️ Movie Store",
+		element: <MovieStore />
+	}
+]
 
 function App() {
 	return (
 		<HashRouter>
 			<Routes>
 				<Route path="/" element={<Landing />} />
-				<Route path="/expense-tracker" element={<ExpenseTracker />} />
-				<Route path="/react-concepts" element={<ReactConcepts />} />
-				<Route path="/course-goals" element={<CourseGoals />} />
-				<Route path="/investment-calculator" element={<InvestmentCalculator />} />
-				<Route path="/user-board" element={<UserBoard />} />
-				<Route path="/dummy-login" element={<DummyLoginIndex />} />
-				<Route path="/react-meals" element={<ReactMeals />} />
+				{projects.map(project => <Route path={project.path} element={project.element} />)}
 			</Routes>
 		</HashRouter>
 	);

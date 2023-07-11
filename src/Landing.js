@@ -1,35 +1,5 @@
 import { Link } from "react-router-dom"
-
-const projects = [
-	{
-		path: "expense-tracker",
-		name: "💰 Expense Tracker"
-	},
-	{
-		path: "react-concepts",
-		name: "💡 React Concepts"
-	},
-	{
-		path: "course-goals",
-		name: "⚽ Course Goals"
-	},
-	{
-		path: "investment-calculator",
-		name: "💸 Investment Calculator"
-	},
-	{
-		path: "user-board",
-		name: "👤 User Board"
-	},
-	{
-		path: "dummy-login",
-		name: "🗝️ Dummy Login"
-	},
-	{
-		path: "react-meals",
-		name: "🍕 React Meals"
-	}
-]
+import { projects } from "./App"
 
 const Landing = () => {
 	return (
