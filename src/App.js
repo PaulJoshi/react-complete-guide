@@ -9,6 +9,7 @@ import DummyLoginIndex from "./dummy-login/DummyLoginIndex";
 import ReactMeals from "./react-meals/ReactMeals";
 import MovieStore from "./movie-store/MovieStore";
 import TaskApp from "./task-app/TaskApp";
+import ReactForm from "./react-form/ReactForm";
 
 export const projects = [
 	{
@@ -55,6 +56,11 @@ export const projects = [
 		path: "task-app",
 		name: "✔️ Task App",
 		element: <TaskApp />
+	},
+	{
+		path: "react-form",
+		name: "📃 React Form",
+		element: <ReactForm />
 	}
 ]
 
