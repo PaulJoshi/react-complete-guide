@@ -8,6 +8,7 @@ import UserBoard from "./user-board/UserBoard";
 import DummyLoginIndex from "./dummy-login/DummyLoginIndex";
 import ReactMeals from "./react-meals/ReactMeals";
 import MovieStore from "./movie-store/MovieStore";
+import TaskApp from "./task-app/TaskApp";
 
 export const projects = [
 	{
@@ -49,6 +50,11 @@ export const projects = [
 		path: "movie-store",
 		name: "📽️ Movie Store",
 		element: <MovieStore />
+	},
+	{
+		path: "task-app",
+		name: "✔️ Task App",
+		element: <TaskApp />
 	}
 ]
 

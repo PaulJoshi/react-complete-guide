@@ -15,6 +15,11 @@
 	font-weight: 700;
 }
 
+.subtitle {
+	font-size: 0.9rem;
+	margin: 0.6rem 0;
+}
+
 .button {
 	font: inherit;
 	cursor: pointer;

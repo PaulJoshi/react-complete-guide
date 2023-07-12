@@ -96,6 +96,7 @@ function MovieStore() {
 		<Fragment>
 			<header className="section">
 				<h1 className="title">Movie Store</h1>
+				<p className="subtitle">This webapp can read and write movies to a Firebase realtime database</p>
 			</header>
 			<section className="section">
 				<AddMovie onAddMovie={addMovieHandler} />
