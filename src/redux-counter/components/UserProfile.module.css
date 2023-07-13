@@ -1,0 +1,12 @@
+.profile {
+	margin: 5rem auto;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+	max-width: 40rem;
+	border: 1px solid #ddd0eb;
+	border-radius: 2px;
+	padding: 1rem;
+	text-align: center;
+	background-color: #f4f0fa;
+	font-size: large;
+	font-weight: 700;
+}

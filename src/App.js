@@ -10,6 +10,8 @@ import ReactMeals from "./react-meals/ReactMeals";
 import MovieStore from "./movie-store/MovieStore";
 import TaskApp from "./task-app/TaskApp";
 import ReactForm from "./react-form/ReactForm";
+import ReduxCounterIndex from "./redux-counter/ReduxCounterIndex";
+import ReduxCart from "./redux-cart/ReduxCart";
 
 export const projects = [
 	{
@@ -61,6 +63,17 @@ export const projects = [
 		path: "react-form",
 		name: "📃 React Form",
 		element: <ReactForm />
+	},
+	{
+		path: "redux-counter",
+		name: "🔢 Redux Counter",
+		element: <ReduxCounterIndex />,
+		topics: ["Redux"]
+	},
+	{
+		path: "redux-cart",
+		name: "🛒 Redux Cart",
+		element: <ReduxCart />
 	}
 ]
 

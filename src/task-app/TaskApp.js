@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Tasks from './components/Tasks/Tasks';
 import NewTask from './components/NewTask/NewTask';
 import useHttp from './hooks/use-http';
@@ -30,7 +30,7 @@ function TaskApp() {
 	};
 
 	return (
-		<Fragment>
+		<div className="main">
 			<NewTask onAddTask={taskAddHandler} />
 			<Tasks
 				items={tasks}
@@ -38,7 +38,7 @@ function TaskApp() {
 				error={error}
 				onFetch={sendRequest}
 			/>
-		</Fragment>
+		</div>
 	);
 }
 
