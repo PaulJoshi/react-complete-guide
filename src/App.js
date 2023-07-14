@@ -11,7 +11,7 @@ import MovieStore from "./movie-store/MovieStore";
 import TaskApp from "./task-app/TaskApp";
 import ReactForm from "./react-form/ReactForm";
 import ReduxCounterIndex from "./redux-counter/ReduxCounterIndex";
-import ReduxCart from "./redux-cart/ReduxCart";
+import ReduxCartIndex from "./redux-cart/ReduxCartIndex";
 
 export const projects = [
 	{
@@ -73,7 +73,7 @@ export const projects = [
 	{
 		path: "redux-cart",
 		name: "🛒 Redux Cart",
-		element: <ReduxCart />
+		element: <ReduxCartIndex />
 	}
 ]
 
