@@ -12,6 +12,7 @@ import TaskApp from "./task-app/TaskApp";
 import ReactForm from "./react-form/ReactForm";
 import ReduxCounterIndex from "./redux-counter/ReduxCounterIndex";
 import ReduxCartIndex from "./redux-cart/ReduxCartIndex";
+import HelloRouter from "./hello-router/HelloRouter"
 import PageNotFound from './404Page';
 
 export const projects = [
@@ -75,6 +76,11 @@ export const projects = [
 		path: "redux-cart",
 		name: "🛒 Redux Cart",
 		element: <ReduxCartIndex />
+	},
+	{
+		path: "/hello-router/*",
+		name: "⤴️ Hello Router",
+		element: <HelloRouter />
 	}
 ]
 
@@ -84,6 +90,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Landing />} />
 				{projects.map(project => <Route path={project.path} element={project.element} />)}
+				{/* <Route path="/hello-router/*" element={<HelloRouter />} /> */}
 				<Route path="*" element={<PageNotFound />} />
 			</Routes>
 		</HashRouter>
