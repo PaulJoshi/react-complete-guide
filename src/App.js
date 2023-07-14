@@ -12,6 +12,7 @@ import TaskApp from "./task-app/TaskApp";
 import ReactForm from "./react-form/ReactForm";
 import ReduxCounterIndex from "./redux-counter/ReduxCounterIndex";
 import ReduxCartIndex from "./redux-cart/ReduxCartIndex";
+import PageNotFound from './404Page';
 
 export const projects = [
 	{
@@ -83,6 +84,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Landing />} />
 				{projects.map(project => <Route path={project.path} element={project.element} />)}
+				<Route path="*" element={<PageNotFound />} />
 			</Routes>
 		</HashRouter>
 	);
