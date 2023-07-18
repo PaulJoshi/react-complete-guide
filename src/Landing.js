@@ -9,7 +9,8 @@ const Landing = () => {
 		projects.map(project => 
 			<li key={project.path}>
 				<Link
-					to={project.path.replace('*', '')}
+					// to={project.path.replace('*', '')}
+					to={project.path}
 				>
 					<div className="flex flex-col items-center border border-teal-100 shadow rounded-sm bg-teal-100 transition hover:shadow-lg hover:bg-teal-200 hover:border-teal-200">
 						<img className="h-48 w-full object-cover bg-teal-50" src={`${screenshotUrl}${project.path}&type=png`} alt="project-thumbnail"/>

@@ -1,5 +1,7 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { Suspense } from "react";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import Landing from "./Landing";
+import PageNotFound from './404Page';
 import ExpenseTracker from "./expense-tracker/ExpenseTracker";
 import ReactConcepts from "./react-concepts/ReactConcepts";
 import CourseGoals from "./course-goals/CourseGoals";
@@ -12,10 +14,23 @@ import TaskApp from "./task-app/TaskApp";
 import ReactForm from "./react-form/ReactForm";
 import ReduxCounterIndex from "./redux-counter/ReduxCounterIndex";
 import ReduxCartIndex from "./redux-cart/ReduxCartIndex";
+
 import HelloRouter from "./hello-router/HelloRouter"
-import PageNotFound from './404Page';
+import HelloRouterHomePage from "./hello-router/pages/Home"
+import ErrorPage from "./hello-router/pages/Error";
+import ProductsPage from "./hello-router/pages/Products";
+import ProductDetailPage from "./hello-router/pages/ProductDetail";
+
+import ReactBlog from "./react-blog/ReactBlog";
+import HomePage from "./react-blog/pages/Home";
+import BlogPage from "./react-blog/pages/Blog";
+import PostPage from "./react-blog/pages/Post";
 
 export const projects = [
+	{
+		index: true,
+		element: <Landing />
+	},
 	{
 		path: "expense-tracker",
 		name: "💰 Expense Tracker",
@@ -78,23 +93,67 @@ export const projects = [
 		element: <ReduxCartIndex />
 	},
 	{
-		path: "/hello-router/*",
+		path: "hello-router",
 		name: "⤴️ Hello Router",
-		element: <HelloRouter />
+		element: <HelloRouter />,
+		errorElement: <ErrorPage />,
+		children: [
+			{ index: true, element: <HelloRouterHomePage /> },
+			{ path: 'products', element: <ProductsPage /> },
+			{ path: 'products/:productId', element: <ProductDetailPage /> }
+		],
+	},
+	{
+		path: "react-blog",
+		name: "📑 React Blog",
+		element: <ReactBlog />,
+		children: [
+			{
+				index: true,
+				element: <HomePage />,
+			},
+			{
+				path: 'posts',
+				children: [
+					{
+						index: true,
+						element: <Suspense fallback={<p>Loading...</p>}><BlogPage /></Suspense>,
+						loader: () => import("./react-blog/pages/Blog").then(module => module.loader())
+					},
+					{
+						path: ':id',
+						element: <Suspense fallback={<p>Loading...</p>}><PostPage /></Suspense>,
+						loader: (meta) => import("./react-blog/pages/Post").then(module => module.loader(meta))
+					},
+				],
+			},
+		],
 	}
 ]
 
-function App() {
-	return (
-		<HashRouter>
-			<Routes>
-				<Route path="/" element={<Landing />} />
-				{projects.map(project => <Route path={project.path} element={project.element} />)}
-				{/* <Route path="/hello-router/*" element={<HelloRouter />} /> */}
-				<Route path="*" element={<PageNotFound />} />
-			</Routes>
-		</HashRouter>
-	);
+const router = createHashRouter([
+	{
+		path: "/",
+		errorElement: <PageNotFound />,
+		children: projects
+	}
+])
+
+// function App() {
+// 	return (
+// 		<HashRouter>
+// 			<Routes>
+// 				<Route path="/" element={<Landing />} />
+// 				{projects.map(project => <Route path={project.path} element={project.element} />)}
+// 				{/* <Route path="/hello-router/*" element={<HelloRouter />} /> */}
+// 				<Route path="*" element={<PageNotFound />} />
+// 			</Routes>
+// 		</HashRouter>
+// 	);
+// }
+
+const App = () => {
+	return (<RouterProvider router={router} />)
 }
 
 export default App;
