@@ -1,0 +1,27 @@
+.App {
+	text-align: center;
+	margin: 2rem 1rem;
+}
+
+.App h1, .App h3 {
+	font-size: x-large;
+	font-weight: 700;
+	margin: 1rem;
+}
+
+.Button {
+	border-radius: 2px;
+	font: inherit;
+	padding: 10px 14px;
+	margin: 8px;
+	background-color: #521751;
+	color: white;
+	cursor: pointer;
+	box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.Button:hover,
+.Button:active {
+	background-color: #7f327d;
+	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}

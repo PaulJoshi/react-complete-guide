@@ -1,7 +1,9 @@
 import { Suspense } from "react";
 import { RouterProvider, createHashRouter } from "react-router-dom";
+
 import Landing from "./Landing";
 import PageNotFound from './404Page';
+
 import ExpenseTracker from "./expense-tracker/ExpenseTracker";
 import ReactConcepts from "./react-concepts/ReactConcepts";
 import CourseGoals from "./course-goals/CourseGoals";
@@ -25,12 +27,9 @@ import ReactBlog from "./react-blog/ReactBlog";
 import HomePage from "./react-blog/pages/Home";
 import BlogPage from "./react-blog/pages/Blog";
 import PostPage from "./react-blog/pages/Post";
+import ReactAnimation from "./react-animation/ReactAnimation";
 
 export const projects = [
-	{
-		index: true,
-		element: <Landing />
-	},
 	{
 		path: "expense-tracker",
 		name: "💰 Expense Tracker",
@@ -128,6 +127,11 @@ export const projects = [
 				],
 			},
 		],
+	},
+	{
+		path: "react-animation",
+		name: "💫 React Animation",
+		element: <ReactAnimation />
 	}
 ]
 
@@ -135,22 +139,14 @@ const router = createHashRouter([
 	{
 		path: "/",
 		errorElement: <PageNotFound />,
-		children: projects
+		children:[ 
+			{
+				index: true,
+				element: <Landing />
+			}, ...projects
+		]
 	}
 ])
-
-// function App() {
-// 	return (
-// 		<HashRouter>
-// 			<Routes>
-// 				<Route path="/" element={<Landing />} />
-// 				{projects.map(project => <Route path={project.path} element={project.element} />)}
-// 				{/* <Route path="/hello-router/*" element={<HelloRouter />} /> */}
-// 				<Route path="*" element={<PageNotFound />} />
-// 			</Routes>
-// 		</HashRouter>
-// 	);
-// }
 
 const App = () => {
 	return (<RouterProvider router={router} />)
