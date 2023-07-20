@@ -27,7 +27,12 @@ import ReactBlog from "./react-blog/ReactBlog";
 import HomePage from "./react-blog/pages/Home";
 import BlogPage from "./react-blog/pages/Blog";
 import PostPage from "./react-blog/pages/Post";
+
 import ReactAnimation from "./react-animation/ReactAnimation";
+
+import FavProducts from "./fav-products/FavProducts";
+import FavouritesPage from "./fav-products/containers/Favourites";
+import Products from "./fav-products/containers/Products";
 
 export const projects = [
 	{
@@ -132,6 +137,21 @@ export const projects = [
 		path: "react-animation",
 		name: "💫 React Animation",
 		element: <ReactAnimation />
+	},
+	{
+		path: "fav-products",
+		name: "💘 Fav Products",
+		element: <FavProducts />,
+		children: [
+			{
+				index: true,
+				element: <Products />
+			},
+			{
+				path: 'favourites',
+				element: <FavouritesPage />
+			}
+		]
 	}
 ]
 
@@ -149,7 +169,7 @@ const router = createHashRouter([
 ])
 
 const App = () => {
-	return (<RouterProvider router={router} />)
+	return <RouterProvider router={router} />
 }
 
 export default App;

@@ -1,0 +1,32 @@
+.favButton {
+	font: inherit;
+	background: #ff2058;
+	padding: 0.5rem 2rem;
+	color: white;
+	border: 1px solid #ff2058;
+	margin: 0.5rem 0;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.favButton:hover,
+.favButton:active {
+	background: white;
+	color: #ff2058;
+}
+
+.favButton:focus {
+	outline: none;
+}
+
+.favButton.button-outline {
+	background: white;
+	color: #ff2058;
+}
+
+.favButton.button-outline:hover,
+.favButton.button-outline:active {
+	background: #ff2058;
+	color: white;
+	box-shadow: none;
+}
